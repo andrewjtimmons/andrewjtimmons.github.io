@@ -7,7 +7,7 @@ $(document).ready(function() {
   var i = 1;
 
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-          document.write("please look at this on a desktop computer")
+          document.write("<h1>please look at this on a desktop computer</h1>")
         }
   else {
     initialize();
