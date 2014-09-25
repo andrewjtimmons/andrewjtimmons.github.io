@@ -6,11 +6,16 @@ $(document).ready(function() {
   var images = createImages();
   var i = 1;
 
-  initialize();
-
-  setInterval(function() {
-    redraw()
-  }, 472);
+  if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          document.write("please look at this on a desktop computer")
+        }
+  else {
+    initialize();
+    
+    setInterval(function() {
+      redraw()
+    }, 472);
+  }
 
   function initialize() {
     //create the universe
