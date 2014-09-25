@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var htmlCanvas = document.getElementById('canvas');
+  var tweet = document.getElementById('tweet');
   var context = htmlCanvas.getContext('2d');
   var numPhotos = 24
   var images = createImages();
@@ -29,6 +30,10 @@ $(document).ready(function() {
   function resizeCanvas() {
     htmlCanvas.width = window.innerWidth;
     htmlCanvas.height = window.innerHeight;
+    htmlCanvas.style.zIndex="-1";
+    tweet.width = window.innerWidth;
+    tweet.height = window.innerHeight;
+    tweet.style.zIndex="-1";
   }
   
   setInterval(function() {
